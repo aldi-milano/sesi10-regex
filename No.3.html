@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6005b7581f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>No.3</title>
+  </head>
+  <body>
+    <h2>Soal no.3</h2>
+    <p>
+      Buat sebuah program yang menyediakan kalimat berikut sehingga user
+      mendapatkan pencarian yang persis sama.
+    </p>
+    <ul>
+      <li>Bagaimana cara memulai usaha bisnis</li>
+      <li>Bootcamp impact byte</li>
+      <li>Status covid hari ini</li>
+    </ul>
+
+    <div id="kotak">
+      <input
+        type="text"
+        id="keyword"
+        class="kolom"
+        placeholder="Type here..."
+      />
+      <button id="tombol3" class="btn">submit</button>
+    </div>
+
+    <div id="arrow">
+      <a href="./No.2.html"><i class="fas fa-chevron-circle-left"></i></a>
+      <a href="./index.html"><i class="fas fa-chevron-circle-right"></i></a>
+    </div>
+
+    <script>
+      document.getElementById("tombol3").addEventListener("click", cekKeyword);
+
+      function cekKeyword() {
+        let inputKeyword = document.getElementById("keyword").value;
+
+        let pencarian =
+          /^Bagaimana cara memulai usaha bisnis$|^Bootcamp impact byte$|^Status covid hari ini$/.test(
+            inputKeyword
+          );
+        pencarian ? alert("Keyword Benar") : alert("Keyword Salah");
+      }
+    </script>
+  </body>
+</html>

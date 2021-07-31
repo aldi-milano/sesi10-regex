@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6005b7581f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Regex</title>
+  </head>
+  <body>
+    <h2>Soal no.1</h2>
+    <p>
+      Buat sebuah program untuk mengecek apakah karakter pertama dalam sebuah
+      string mengandung huruf besar atau tidak.
+    </p>
+    <ul>
+      <li>
+        Jika huruf pertama adalah huruf besar. Program akan
+        menampilkan/console.log ‘Huruf pertama adalah huruf besar’
+      </li>
+      <li>
+        Jika huruf pertama bukan huruf besar. Program akan
+        menampilkan/console.log ‘Huruf pertama adalah huruf kecil’
+      </li>
+    </ul>
+
+    <div id="kotak">
+      <input
+        type="text"
+        id="inputCapital"
+        class="kolom"
+        placeholder="Type here..."
+      />
+      <button id="tombol" class="btn">submit</button>
+      <p id="hasil"></p>
+    </div>
+
+    <div id="arrow">
+      <a href="./No.3.html"><i class="fas fa-chevron-circle-left"></i></a>
+      <a href="./No.2.html"><i class="fas fa-chevron-circle-right"></i></a>
+    </div>
+
+    <script>
+      let btn = document.getElementById("tombol");
+      let inputKata = document.getElementById("inputCapital");
+      let printHasil = document.getElementById("hasil");
+
+      btn.onclick = function () {
+        cekCapital(inputKata.value);
+      };
+
+      function cekCapital(inputKata) {
+        let hasil = /^[A-Z]/.test(inputKata);
+        hasil
+          ? (printHasil.innerHTML = "Huruf pertama adalah huruf besar")
+          : (printHasil.innerHTML = "Huruf pertama adalah huruf kecil");
+      }
+    </script>
+  </body>
+</html>

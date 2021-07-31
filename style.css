@@ -1,0 +1,48 @@
+html {
+    font-family: 'Open Sans'
+}
+
+/* #inputCapital {
+    padding: 5px;
+    width: 50%; 
+}
+
+#nomor {
+    padding: 5px;
+    width: 50%;
+} */
+
+.kolom {
+    padding: 5px;
+    width: 50%;
+}
+
+.btn {
+    padding: 5px;
+}
+
+#kotak {
+    border-style: solid;
+    border-width: thin;
+    width: 40%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border-color: lightslategray;
+}
+
+#arrow {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#arrow a {
+    font-size: 40px;
+    color: #22B5EB;
+    margin: 20px;
+}
+
+#arrow :hover {
+    color: grey
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6005b7581f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>No.2</title>
+  </head>
+  <body>
+    <h2>Soal no.2</h2>
+    <p>Buat sebuah program untuk memvalidasi format nomor handphone</p>
+    <ul>
+      <li>Nomor handphone minimum 10 digit dan maksimum 12 digit</li>
+      <li>Hanya menerima digit karakter</li>
+    </ul>
+
+    <div id="kotak">
+      <input
+        type="text"
+        id="nomor"
+        class="kolom"
+        pattern="[0-9]"
+        placeholder="Type number here..."
+      />
+      <button id="tombol2" class="btn">submit</button>
+    </div>
+
+    <div id="arrow">
+      <a href="./index.html"><i class="fas fa-chevron-circle-left"></i></a>
+      <a href="./No.3.html"><i class="fas fa-chevron-circle-right"></i></a>
+    </div>
+
+    <script>
+      document.getElementById("tombol2").addEventListener("click", cekNumber);
+
+      function cekNumber() {
+        let inputNumber = document.getElementById("nomor").value;
+
+        let checkAngka = /^\d{9,11}$/.test(inputNumber);
+        checkAngka ? alert(true) : alert(false);
+      }
+    </script>
+  </body>
+</html>
